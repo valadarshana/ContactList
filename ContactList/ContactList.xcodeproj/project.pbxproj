@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		0451547C25242B170072FF8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451547B25242B170072FF8F /* AppDelegate.swift */; };
 		0451547E25242B170072FF8F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451547D25242B170072FF8F /* SceneDelegate.swift */; };
-		0451548025242B170072FF8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451547F25242B170072FF8F /* ViewController.swift */; };
 		0451548325242B170072FF8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0451548125242B170072FF8F /* Main.storyboard */; };
 		0451548525242B1C0072FF8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0451548425242B1C0072FF8F /* Assets.xcassets */; };
 		0451548825242B1C0072FF8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0451548625242B1C0072FF8F /* LaunchScreen.storyboard */; };
 		0451549325242B1D0072FF8F /* ContactListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451549225242B1D0072FF8F /* ContactListTests.swift */; };
 		0451549E25242B1D0072FF8F /* ContactListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451549D25242B1D0072FF8F /* ContactListUITests.swift */; };
-		045154AC25242EAF0072FF8F /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045154AB25242EAF0072FF8F /* ContactTableViewCell.swift */; };
+		0451550225257D4E0072FF8F /* ContactListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0451550125257D4E0072FF8F /* ContactListVC.swift */; };
+		04515504252582050072FF8F /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04515503252582050072FF8F /* Contact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,6 @@
 		0451547825242B170072FF8F /* ContactList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0451547B25242B170072FF8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0451547D25242B170072FF8F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0451547F25242B170072FF8F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0451548225242B170072FF8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0451548425242B1C0072FF8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0451548725242B1C0072FF8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -50,7 +49,8 @@
 		0451549925242B1D0072FF8F /* ContactListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContactListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0451549D25242B1D0072FF8F /* ContactListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListUITests.swift; sourceTree = "<group>"; };
 		0451549F25242B1D0072FF8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		045154AB25242EAF0072FF8F /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		0451550125257D4E0072FF8F /* ContactListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListVC.swift; sourceTree = "<group>"; };
+		04515503252582050072FF8F /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,12 +103,12 @@
 			children = (
 				0451547B25242B170072FF8F /* AppDelegate.swift */,
 				0451547D25242B170072FF8F /* SceneDelegate.swift */,
-				0451547F25242B170072FF8F /* ViewController.swift */,
 				0451548125242B170072FF8F /* Main.storyboard */,
 				0451548425242B1C0072FF8F /* Assets.xcassets */,
 				0451548625242B1C0072FF8F /* LaunchScreen.storyboard */,
 				0451548925242B1C0072FF8F /* Info.plist */,
-				045154AB25242EAF0072FF8F /* ContactTableViewCell.swift */,
+				0451550125257D4E0072FF8F /* ContactListVC.swift */,
+				04515503252582050072FF8F /* Contact.swift */,
 			);
 			path = ContactList;
 			sourceTree = "<group>";
@@ -262,10 +262,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				045154AC25242EAF0072FF8F /* ContactTableViewCell.swift in Sources */,
-				0451548025242B170072FF8F /* ViewController.swift in Sources */,
+				04515504252582050072FF8F /* Contact.swift in Sources */,
 				0451547C25242B170072FF8F /* AppDelegate.swift in Sources */,
 				0451547E25242B170072FF8F /* SceneDelegate.swift in Sources */,
+				0451550225257D4E0072FF8F /* ContactListVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
