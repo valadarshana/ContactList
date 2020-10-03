@@ -14,6 +14,9 @@ class Contact: UITableViewCell {
     @IBOutlet weak var imgProfile: UIImageView!
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblNumber: UILabel!
+    
+    @IBOutlet weak var btndel: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

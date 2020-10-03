@@ -11,6 +11,10 @@ import UIKit
 class ContactListVC: UIViewController,UITableViewDataSource,UITableViewDelegate{
 
     @IBOutlet weak var tableView:UITableView!
+    
+    
+    
+    
     var dict = [["image":"profile","name":"Darshana vala","number":"6354011310"],
                 ["image":"profile","name":"Vijay parmar","number":"9876543211"],
                 ["image":"profile","name":"ami mehta","number":"9876543212"],
@@ -38,7 +42,26 @@ class ContactListVC: UIViewController,UITableViewDataSource,UITableViewDelegate{
         cell.imgProfile.image=UIImage(named: dict[indexPath.row]["image"]!)
         cell.lblName.text=dict[indexPath.row]["name"]
         cell.lblNumber.text=dict[indexPath.row]["number"]
+        
+        //Tag is a button property which we can set integer value
+        cell.btndel.tag = indexPath.row // we are setting index path.row as button tag
+        cell.btndel.addTarget(self, action: #selector(btn_click), for: .touchUpInside)
+        
         return cell
+    }
+    @objc func btn_click(_ sender:UIButton){
+        print("Delete Click")
+       
+        let alert = UIAlertController(title: "alert message", message: "are you sure you want to delete??", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { _ in
+            self.dict.remove(at: sender.tag)
+            self.tableView.reloadData()
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100

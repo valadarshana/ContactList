@@ -53,17 +53,21 @@
                                                     <rect key="frame" x="120" y="15" width="286" height="111"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Darshana vala " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ec5-R5-QzO">
-                                                            <rect key="frame" x="0.0" y="0.0" width="286" height="51.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="286" height="31.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9876543210" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HtZ-CE-Gnt">
-                                                            <rect key="frame" x="0.0" y="59.5" width="286" height="51.5"/>
+                                                            <rect key="frame" x="0.0" y="39.5" width="286" height="32"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uFC-hB-ffl">
+                                                            <rect key="frame" x="0.0" y="79.5" width="286" height="31.5"/>
+                                                            <state key="normal" title="Delete"/>
+                                                        </button>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
@@ -77,6 +81,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="btndel" destination="uFC-hB-ffl" id="BRD-xm-tnj"/>
                                             <outlet property="imgProfile" destination="QHW-bs-4wm" id="wMN-RS-Q68"/>
                                             <outlet property="lblName" destination="Ec5-R5-QzO" id="T8O-hq-cBZ"/>
                                             <outlet property="lblNumber" destination="HtZ-CE-Gnt" id="QUR-xp-shy"/>
